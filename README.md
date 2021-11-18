@@ -9,10 +9,16 @@ sin importar si apenas está empezando o ya tiene años practicando, tenemos int
 ****Integrantes:
 
 - Luis Alberto Rocha Sánchez: Ingeniero en Electrónica, actualmente trabajando como tester de software embebido,
-			en sus tiempos libres le gusta jugar videjuegos y tocar la guitarra.
-
+			      en sus tiempos libres le gusta jugar videjuegos y tocar la guitarra.
+- Ana Karina Pérez Ponce: Diseñadora Gráfica
+- Eduardo Longoria
+- José Luis Picazo Rodriguez
 
 
 Páginas de referencia:
 
 - https://www.thomann.de/gb/index.html
+- https://mx.yamaha.com/index.html
+- https://guitarworld.mx/
+- https://www.musiciansfriend.com/
+- http://www.topmusic.com.mx/mx/
