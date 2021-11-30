@@ -8,8 +8,8 @@ sin importar si apenas está empezando o ya tiene años practicando, tenemos int
 
 ****Integrantes:
 
-- Luis Alberto Rocha Sánchez: Ingeniero en Electrónica, actualmente trabajando como tester de software embebido,
-			en sus tiempos libres le gusta jugar videjuegos y tocar la guitarra.
+- Luis Alberto Rocha Sánchez: Ingeniero Electrónico, que se deica al testeo de software embebido, disfruta de jugar videojuegos
+		                 y tocar la guitarra en sus tiempos libres.	 
 
 
 
