@@ -11,151 +11,127 @@
     <body>
         <header>
             <div class="top-header">
-                <div class="nav-section1">
-                    
+                <div class="nav-section1">      
                     <div class="logo"> 
-                        <img src="images/Logo_dark.png" alt="Logo Bmol">
-                    </div>
-
+                        <img src="images/hero_Mesa de trabajo 1 copia 2.jpg" alt="Logo Bmol">
+                    </div> 
                     <div class="form" action="#" method="GET">
-                        <div class="input">Buscar productos, marcas y más</div>
+                        <div class="input"><i class="fas fa-search"></i>Buscar productos, marcas y más</div>
                         <!-- <div class="submit"><i class="fa fa-search"></i></div> -->
                     </div>
-
                     <div>
                         <ul>
-                            <li>Inicio de sesión</li>
-                            <li>Mi carrito</li>
+                            <li><a href="/register"><i class="fas fa-user">Inicio de Sesión</i></a></li>
+                            <li><i class="fas fa-shopping-cart"></i>Mi carrito</li>
+                            <li></li>
                         </ul>
-                    </div>
+                    </div>    
                 </div>
-
                 <div class="nav-section2">
                     <ul>
-                        <li>Servicios</li>
-                        <li>Artistas</li>
-                        <li>Ayuda</li>
+                        <li><i class="fas fa-concierge-bell"></i>Servicios</li>
+                        <li><i class="fas fa-star"></i>Artistas</li>
+                        <li><i class="fas fa-question-circle"></i>Ayuda</li>
                     </ul>
-                </div>
-                
+                </div>    
             </div>
         </header>
+        <section class="banner">
+            <img src="images/hero_Mesa de trabajo 1.jpg" alt="Banner Guitarrra">
+        </section>
         <main>
-            <h3>Ingresa tu pago</h3>
-            <form action="register-pay" method="POST" class="info-form">
-                <section class="selected-product">
-                    <div class="product-info">
-                        <div class="text">
-                            <h3>Producto seleccionado #3465</h3> 
-                            <h3>Costo: $18,000</h3>
+            <section class="last-visit">
+                <h3>BEST SELLER</h3>
+                <div class="products">
+                    <article>
+                        <img src="images/guitarra2.jpg" alt="Guitarras" class="product_img">
+                        <div class="main-article">
+                            <h4 class="description">GUITARRAS</h4>
                         </div>
-
-                        <div>
-                            <img src="https://www.mrcdinstrumentos.com.mx/shared/productos/14769/8213167.jpg" alt="Guitarrra Electrica" width="30%">
+                    </article>
+                    <article>
+                        <img src="images/guitarra.jpg" alt="Bajos" class="product_img">
+                        <div class="main-article">
+                            <h4 class="description">BAJOS</h4>
                         </div>
-                    </div>
-                </section>
-                <section class="personal-info">
-                    <div>
-                        <h3>1. Datos del titular</h3>
-                    </div>
-                    
-                    <div class="info">
-
-                            <div>
-                                <label for="name">Nombre:</label>
-                                <input type="text" name="name" id="name">    
-                            </div>
-                
-                            <div>
-                                <label for="address">Direccion</label>
-                                <input type="text" name="address" id="address">    
-                            </div>
-
-                            <div>
-                                <label for="phone-number">Telefono</label>
-                                <input type="text" name="phone-number" id="phone-number">    
-                            </div>
-                
-                            <div>
-                                <label for="mail">Correo Electronico</label>
-                                <input type="email" name="mail" id="mail">    
-                            </div>
-
-                    </div>  
-                </section>
-
-                <section class="credit-data">
-                    <div>
-                        <h3>2. Datos de la tarjeta de crédito</h3>
-                    </div>
-                    
-                    <div class="credit-card">
-                        <div>    
-                            <p><input type="checkbox" name="remember-card" value="yes"> Quiero almacenar esta tarjeta para agilizar los proximos pagos</p>
+                    </article>
+                    <article>
+                        <img src="images/bateria.jpg" alt="beterias" class="product_img">
+                        <div class="main-article">
+                            <h4 class="description">BATERIAS</h4>
                         </div>
-
-                        <div>
-                            <p>Tipo de tarjeta 
-                                <select name="card-type" id="card-type">
-                                    <option value="debit">Debito</option>
-                                    <option value="credit">Credito</option>
-                                </select>
-                            </p>
-                            
+                    </article>
+                    <article>
+                        <img src="images/teclado.jpg" alt="Teclados" class="product_img">
+                        <div class="main-article">
+                           <h4 class="description">TECLADOS</h4>
                         </div>
-
-                        <div class="card-elements">
-                            <p>Numero de tarjeta</p>
-                            <input type="text" name="card-number">
+                    </article>
+                </div>
+            </section>
+            <section class="last-visit">
+                <h3>PRODUCTOS</h3>
+                <div class="products">
+                    <article>
+                        <img src="images/DDRUM D2.jpg" alt="DDRUM" class="product_img">
+                        <div class="main-article">
+                         <h5 class="description">DDRUM D2</h5>
+                         <p class="price">$11,999.000</p>
                         </div>
-
-                        <div class="card-elements">
-                            <p>Fecha de caducidad</p>
-                            <input type="month" name="date">
+                    </article>
+                    <article>
+                        <img src="images/SABIAN AAX LIMITED EDITION PACK.jpg" alt="SABIAN" class="product_img">
+                        <div class="main-article">
+                            <h5 class="description">SABIAN AAX LIMITED EDITION PACK</h5>
+                            <p class="price">$14,599.000</p>
                         </div>
-
-                        <div class="card-elements">
-                            <p>Código de seguridad</p>
-                            <input type="password" name="password" id="password">
-                            <a href="*">¿que es un codigo de seguridad</a>
+                    </article>
+                    <article>
+                        <img src="images/LP TROPEDO SCRAPER LP335.jpg" alt="LP" class="product_img">
+                        <div class="main-article">
+                            <h5 class="description">LP TROPEDO SCRAPER LP335S</h5>
+                            <p class="price">$269.00</p>
                         </div>
-
-                        <div class="button">
-                            <button type="submit">CONTINUAR</button>
+                    </article>
+                    <article>
+                        <img src="images/DDRUM D2R.jpg" alt="Teclados" class="product_img">
+                        <div class="main-article">
+                            <h5 class="description">DDRUM D2R </h5>
+                            <p class="price">$11,999.00</p>
                         </div>
-                    </div>  
-                </section>
-            </form>
+                    </article>
+                </div>
+            </section>
         </main>
         <footer>
-            <div class="contact">
-
-                <div>
-                    <h3>
-                        BMOL
-                    </h3>
-                    <p>
-                        Blvd. Puerta de Hierro 5153. Int. 203 Fraccionamiento Plaza Andares Zapopan, Jalisco. CP 45116 México
-                    </p>
-                </div>
-
-                <div>
-                    <h3>
-                        ¡CONÓCENOS!
-                    </h3>
-    
-                    <ul>
-                        <li>Servicios</li>
-                        <li>Artistas</li>
-                        <li>Preguntas</li>
-                        <li></li>
-                        <li>Inicio de Sesión</li>
-                        <li>Carrito</li>
-                    </ul>
-                </div>
-            </div>
+            
         </footer>
-        
     </body>
+    <footer>
+        <div class="contact">
+
+            <div>
+                <h4>
+                    BMOL
+                </h4>
+                <p>
+                    Blvd. Puerta de Hierro 5153. Int. 203 Fraccionamiento Plaza Andares Zapopan, Jalisco. CP 45116 México
+                </p>
+            </div>
+
+            <div>
+                <h4>
+                    ¡CONÓCENOS!
+                </h4>
+                <ul>
+                    <li>Servicios
+                    <li>Artistas</li>
+                    <li>Preguntas</li>
+                    <li></li>
+                    <li>Inicio de Sesión</li>
+                    <li>Carrito</li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
 </html>
