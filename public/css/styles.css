@@ -9,34 +9,116 @@ body{
 }
 
 h3{
-    font-size: 24px;
+    font-size: 1rem;
 }
 
-p{
-    font-size: 12px;
-}
 div.top-header{
-    padding: 2.5%;
     background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 header{
     background-color: #000;
-     position: fixed;
+    position: fixed;
     width: 100%;
 }
 
-header div.logo img{
-    width: 8rem;
-    position: absolute;
-    z-index: 50;
-    margin-left: 100%;
-}
 
 header div.logo{
-    padding: 10px;
+    
     position: relative;
 }
+
+header div .logo .item1{
+    background-color: black;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+}
+
+header div .logo .item1 h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 1.5rem;
+    font-size: 0.6rem;
+}
+
+
+header div .logo .item2{
+    background-color: white;
+    position: relative;
+    z-index: 10;
+
+}
+
+header div .logo .item2 h3{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.6rem;
+    height: 1.5rem;
+}
+
+header div .logo .item2 h3 ul{
+    align-self: center;
+    padding: 0 1rem;
+}
+
+header div .logo .item3{
+    background-color: #000;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 7%;
+}
+
+header div.logo img{
+    width: 20%;
+    max-width: 180px;
+    min-width: 79px;
+    position: absolute;
+    z-index: 50;
+    padding-left: 5%;
+    align-self: center;
+}
+
+header .top-header .nav-section1{
+    background-color: #000;
+    color: black;
+    width: 100%;
+}
+
+header .top-header .nav-section1 .form{
+    align-self: center;
+    margin-left: 20%;
+}
+
+
+header .top-header .nav-section1 div .item1 .ul{
+    align-self: center;
+    color: white;
+    width: 40%;
+}
+
+
+header .top-header .nav-section1 div .item2 ul{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+header .top-header .nav-section1 div ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
 header nav{
     font-size: 12px;
 }
@@ -55,7 +137,6 @@ header .form .input{
     border: 1px solid #000;
     outline: none;
     color: #666;
-    padding: 2px;
 }
 header .form .submit{
     background-color: #FFF;
@@ -64,6 +145,7 @@ header .form .submit{
     width: 10%;
 }
 
+
 header div.top-header p{
     width: 100%;
     text-align: center;
@@ -71,33 +153,7 @@ header div.top-header p{
 }
 
 
-header .top-header .nav-section1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #000;
-    color: #FFF;
-    
-}
-
-header .top-header .nav-section1 .form{
-    margin-top: 1rem;
-    margin-left: 20%;
-}
-
-header .top-header .nav-section1 div ul{
-    display: flex;
-    justify-content: space-evenly;
-    margin-right: 2rem;
-}
-
-
-header .top-header .nav-section1 div ul li{
-    margin: 1rem;
-}
-
 header .top-header .nav-section2{
-    justify-content: space-between;
     color: #000;
     background-color: #fff;
     
@@ -118,15 +174,21 @@ header .top-header .nav-section2 ul li{
 }
 
 main{
-    font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gothic A1', sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: black;
 }
 
+main .payment-title{
+    color: white;
+    padding-top: 32%;
+    padding-left: 5%;
+    width: 80%;
+}
+
 main .info-form{
-    padding-top: 20%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -167,6 +229,9 @@ main .product-info{
 
 main .product-info img{
     margin: 20px;
+    width: 50%;
+    min-width: 100px;
+    max-width: 600px
 }
 
 main .personal-info{
@@ -203,32 +268,376 @@ main .credit-card .card-elements input{
 
 main .credit-data div .button button{
     display: flex;
-}
-
-main .credit-data div .button button{
+    align-self: center;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 0.7rem;
     margin: 30px;
     border: none;
     color: #000;
-    padding: 15px 70px;
+    padding: 5px 100px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     cursor: pointer;
-    margin-left: 50%;
+    margin-left: 30%;
 }
 
 main .credit-data div .button button:hover{
-    box-shadow: 10px 10px rgba(10, 224, 142, .8);
+    box-shadow: 0px 0px 15px rgb(23, 223, 0, .8);
+    transition: margin-bottom 20ms, box-shadow 20ms;
 }
 
 footer{
     background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2.5%;
+    font-size: 0.6rem;
+    
+}
+
+footer h4{
+    font-size: 0.6rem;
 }
 
 footer .contact{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 30%;
+    padding: 0 10%;
     font-size: 0.5rem;
+    font-weight: bold;
+}
+
+footer .contact ul{
+    list-style-type: none;
+    
+}
+
+footer .connect{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    width: 70%;
+}
+footer .connect .suscribe{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+footer .connect .suscribe input{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    padding: 0.3rem;
+}
+
+footer .connect .suscribe button{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    padding: 0.3rem 1rem;
+}
+
+footer .connect .notices {
+    background-color: black;
+    align-self: center;
+    color: #fff;
+    padding: 0.5rem;
+    font-family: 'Gothic A1', sans-serif;
+
+}
+
+footer .connect .notices h2{
+    font-size: 0.7rem;
+    padding: 0.6rem;
+}
+
+
+footer .connect .social-media .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 90%;
+}
+
+footer .connect .social-media .container p{
+    padding: 0.2rem;
+    font-size: 1rem;
+}
+
+footer .connect .social-media .container-contact-info{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+@media (max-width: 361px){
+
+    header .top-header .nav-section1 .form{
+        display: none;
+    }
+
+    header .top-header .nav-section1 div .item1 .ul div{
+        display: none;
+    }
+    
+    header div .logo .item2 ul li{
+        display: none;
+    }
+
+    header div .logo .item2 h3{
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header div .logo .item1 h3{
+        font-size: 0.8rem;
+
+    }
+
+    header div .logo .item2 h3{
+        font-size: 0.8rem;
+
+    }
+
+    main .payment-title{
+        padding-top: 110px;
+    }
+
+    main .info-form .text{
+        flex-direction: column;
+    }
+
+    main .info-form h3{
+        font-size: 0.7rem;
+    }
+
+    main .personal-info {
+        font-size: 0.7rem;
+    }
+
+    main .credit-card p{
+        font-size: 0.6rem;
+    }
+
+    main .credit-card .card-elements p{
+        font-size: 0.6rem;
+    }
+
+    main .credit-card .card-elements input{
+        width: 100%;
+    }
+
+    main .credit-card a{
+        font-size: 0.6rem;
+    }
+
+    main .personal-info input{
+        color: white;
+        width: 100%
+    }
+
+    main .credit-data div .button button{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        padding: 2% 10%;
+        margin: 1rem auto;
+    }
+
+    footer{
+        flex-direction: column;
+        font-size: 1rem;
+        
+    }
+
+    
+    footer .contact{
+        padding-left: 10px;
+        width: 100%;
+
+    }
+
+    footer .connect{
+        padding-top: 20px;
+        width: 100%;
+    }
+
+    footer .connect .notices h2{
+        font-size: 0.6rem;
+    }
+
+    footer .connect .notices .suscribe{
+        flex: wrap;
+    }
+
+    footer .connect .notices input{
+        font-size: 0.5rem;
+    }
+
+    footer .connect .notices button{
+        font-size: 0.5rem;
+    }
+
+    footer .connect .social-media h4{
+        font-size: 0.4rem;
+    }
+
+    footer .connect .social-media .container-contact-info{
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    footer .connect .social-media .container-contact-info h4{
+        padding: 0.2rem;
+    }
+    
+    main .product-info img{
+        margin-left: 0;
+    }
+
+}
+
+
+@media (min-width: 361px) and (max-width: 769px){
+    
+    header .top-header .nav-section1 div .item1 .ul li{
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .top-header .nav-section1 div .item1 .ul div{
+        padding-left: 0.2rem;
+    }
+
+    header .top-header .nav-section1 div .item1 .input{
+        font-size: 0.4rem;
+    }
+
+    header div .logo .item2 .burger-menu{
+        display: none;
+    }
+
+    
+
+    
+}
+
+@media (min-width: 769px){
+
+    header .top-header .nav-section1 div .item1 .ul li{
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .top-header .nav-section1 div .item1 .ul div{
+        padding-left: 0.2rem;
+    }
+
+    header div .logo .item1 h3{
+        font-size: 1rem;
+        height: 2rem;
+    }
+
+    header div .logo .item2 h3{
+        font-size: 1rem;
+        height: 2rem;
+    }
+
+    header div .logo .item3{
+        padding-bottom: 100px;
+    }
+
+    header div .logo .item2 .burger-menu{
+        display: none;
+    }
+
+    main .payment-title{
+        color: white;
+        padding-top: 200px;
+        padding-left: 5%;
+        width: 80%;
+    }
+
+    main .personal-info {
+        font-size: 1.2rem;
+    }
+
+    main .credit-card p{
+        font-size: 1.2rem;
+    }
+
+    main .credit-card .card-elements p{
+        font-size: 1.2rem;
+    }
+
+    main .personal-info input{
+        color: white;
+        width: 50%
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    footer{
+
+        font-size: 1rem;
+        
+    }
+
+
+    footer h4{
+        font-size: 1rem;
+    }
+    
+    footer .contact{
+
+        font-size: 1rem;
+
+    }
+
+    
+    footer .connect .suscribe input{
+        font-size: 1rem;
+    }
+    
+    footer .connect .suscribe button{
+        font-size: 1rem;
+        padding: 0.3rem 1rem;
+    }
+    
+    footer .connect .notices {
+        padding: 1rem;
+    
+    }
+    
+    footer .connect .notices h2{
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+    
+    footer .connect .social-media .container{
+        padding-top: 0.5rem;
+
+    }
+    
+    footer .connect .social-media .container p{
+        padding: 0.3rem;
+        font-size: 1.5rem;
+    }
+    
+    footer .connect .social-media .container-contact-info{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+    
+
 }
