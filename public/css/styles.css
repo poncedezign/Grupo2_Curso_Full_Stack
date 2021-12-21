@@ -3,11 +3,20 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
     font-family: 'Roboto';
-    background-color: #ebebeb;
+    background-color: black;
+    font-size: 24;
+
+ }
+body div .input{
+    padding: 2.5px;
+    color: black;
+    background-color: white;
+
 }
 
 h3{
@@ -19,7 +28,37 @@ div.top-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 24px;
+    color: white;
 }
+
+h4{
+    font-size: 21px;
+    color: black;
+    padding: 10px;
+    font-style: bold;
+}
+h5{
+    font-size: 14px;
+    color: black;
+    margin-left: 10px;
+}
+
+p{
+    font-size: 1rem;
+    color: white;
+}
+main article p{
+    color: black;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+div.top-header{
+    padding: 0;
+    background-color:white;
+}
+
 
 header{
     background-color: #000;
@@ -133,9 +172,9 @@ header ul li a{
     text-decoration: none;
     color: #000;
 }
-
-header .form .input{
-    background-color: #FFF;
+main.Best-Seller{
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid #000;
     outline: none;
     color: #666;
@@ -244,6 +283,45 @@ footer .connect .notices h2{
     font-size: 0.7rem;
     padding: 0.6rem;
 }
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: white;
+}
+
+
+main section h3{
+    margin: 20px 0px;
+}
+main section div.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main section div.products article{
+    width: 45%;
+}
+
 
 
 footer .connect .social-media .container{
