@@ -1,9 +1,6 @@
-@import url("payment.css");
-
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
 }
 
 body{
@@ -13,7 +10,6 @@ body{
 
  }
 body div .input{
-    padding: 2.5px;
     color: black;
     background-color: white;
 
@@ -55,10 +51,11 @@ main article p{
 }
 
 div.top-header{
-    padding: 0;
-    background-color:white;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-
 
 header{
     background-color: #000;
@@ -67,10 +64,6 @@ header{
 }
 
 
-header div.logo{
-    
-    position: relative;
-}
 
 header div .logo .item1{
     background-color: black;
@@ -112,10 +105,10 @@ header div .logo .item3{
     background-color: #000;
     position: relative;
     z-index: 10;
-    padding-bottom: 7%;
+    padding-bottom: 10.5%;
 }
 
-header div.logo img{
+#logo img{
     width: 20%;
     max-width: 180px;
     min-width: 79px;
@@ -172,9 +165,9 @@ header ul li a{
     text-decoration: none;
     color: #000;
 }
-main.Best-Seller{
-    display: flex;
-    flex-wrap: wrap;
+
+header .form .input{
+    background-color: #FFF;
     border: 1px solid #000;
     outline: none;
     color: #666;
@@ -214,6 +207,152 @@ header .top-header .nav-section2 ul li{
     margin: 1rem;
 }
 
+main{
+    font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+main .info-form{
+    padding-top: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 80%;
+}
+
+
+main .info-form h3{
+    color: black;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+main .info-form .text{
+    color: black;
+    background-color: white;
+
+}
+
+
+main .section{
+    display: flex;
+    max-width: 1140;
+
+}
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: white;
+}
+
+
+main section h3{
+    margin: 20px 0px;
+}
+main section div.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main section div.products article{
+    width: 45%;
+}
+
+
+main .product-info .text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+main .product-info img{
+    margin: 20px;
+}
+
+main .personal-info{
+    color: white;
+}
+
+main .personal-info .info div{
+    margin: 1rem;
+}
+
+
+main .credit-data div{
+    color: white;
+    margin-bottom: 20px;
+}
+
+main .credit-data .credit-card p{
+    color: white;
+}
+
+
+main .credit-card .card-elements p{
+    font-size: 1rem;
+}
+
+main .credit-card .card-elements{
+    margin-top: 10px;
+
+}
+
+main .credit-card .card-elements input{
+    width: 50%;
+}
+
+main .credit-data div .button button{
+    display: flex;
+}
+
+main .credit-data div .button button{
+    margin: 30px;
+    border: none;
+    color: #000;
+    padding: 15px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 50%;
+}
+
+main .credit-data div .button button:hover{
+    box-shadow: 10px 10px rgba(10, 224, 142, .8);
+}
+
+
 footer{
     background-color: #FFF;
     display: flex;
@@ -224,6 +363,12 @@ footer{
     
 }
 
+footer p {
+
+    color: black;
+    
+}
+
 footer h4{
     font-size: 0.6rem;
 }
@@ -231,10 +376,14 @@ footer h4{
 footer .contact{
     display: flex;
     flex-direction: column;
-    width: 30%;
     padding: 0 10%;
     font-size: 0.5rem;
     font-weight: bold;
+}
+
+footer .contact p{
+    font-size: 0.5rem;
+
 }
 
 footer .contact ul{
@@ -283,45 +432,6 @@ footer .connect .notices h2{
     font-size: 0.7rem;
     padding: 0.6rem;
 }
-section.banner img{
-    width: 100%;
-}
-
-main{
-    width: 90%;
-    margin: 0 auto;
-}
-
-main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
-}
-
-main section article img{
-    width: 100%;
-}
-
-main section article i,
-.discount{
-    color: white;
-}
-
-
-main section h3{
-    margin: 20px 0px;
-}
-main section div.products{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-main section div.products article{
-    width: 45%;
-}
-
 
 
 footer .connect .social-media .container{
@@ -372,49 +482,8 @@ footer .connect .social-media .container-contact-info{
 
     }
 
-    main .payment-title{
-        padding-top: 110px;
-    }
-
-    main .info-form .text{
-        flex-direction: column;
-    }
-
-    main .info-form h3{
-        font-size: 0.7rem;
-    }
-
-    main .personal-info {
-        font-size: 0.7rem;
-    }
-
-    main .credit-card p{
-        font-size: 0.6rem;
-    }
-
-    main .credit-card .card-elements p{
-        font-size: 0.6rem;
-    }
-
-    main .credit-card .card-elements input{
-        width: 100%;
-    }
-
-    main .credit-card a{
-        font-size: 0.6rem;
-    }
-
-    main .personal-info input{
-        color: white;
-        width: 100%
-    }
-
-    main .credit-data div .button button{
-        margin-left: 0;
-        display: flex;
-        align-items: center;
-        padding: 2% 10%;
-        margin: 1rem auto;
+    main section article .description{
+        display: block;
     }
 
     footer{
@@ -423,10 +492,16 @@ footer .connect .social-media .container-contact-info{
         
     }
 
-    
+
     footer .contact{
         padding-left: 10px;
         width: 100%;
+
+    }
+
+
+    footer .contact p{
+        font-size: 0.5rem;
 
     }
 
@@ -463,10 +538,7 @@ footer .connect .social-media .container-contact-info{
     footer .connect .social-media .container-contact-info h4{
         padding: 0.2rem;
     }
-    
-    main .product-info img{
-        margin-left: 0;
-    }
+
 
 }
 
@@ -490,8 +562,9 @@ footer .connect .social-media .container-contact-info{
         display: none;
     }
 
-    
-
+    main {
+        padding-top: 10%;
+    }
     
 }
 
@@ -524,28 +597,12 @@ footer .connect .social-media .container-contact-info{
         display: none;
     }
 
-    main .payment-title{
-        color: white;
-        padding-top: 200px;
-        padding-left: 5%;
-        width: 80%;
+    main {
+        padding-top: 10%;
     }
 
-    main .personal-info {
-        font-size: 1.2rem;
-    }
-
-    main .credit-card p{
-        font-size: 1.2rem;
-    }
-
-    main .credit-card .card-elements p{
-        font-size: 1.2rem;
-    }
-
-    main .personal-info input{
-        color: white;
-        width: 50%
+    main section div.products article{
+        width: 22%;
     }
 
     h3{
@@ -555,9 +612,20 @@ footer .connect .social-media .container-contact-info{
     footer{
 
         font-size: 1rem;
+        color: black;
         
     }
 
+    footer p {
+
+        font-size: 1rem;
+        
+    }
+
+    footer .contact p{
+        font-size: 1rem;
+    
+    }
 
     footer h4{
         font-size: 1rem;
@@ -604,6 +672,5 @@ footer .connect .social-media .container-contact-info{
         justify-content: space-between;
         width: 90%;
     }
-    
 
 }

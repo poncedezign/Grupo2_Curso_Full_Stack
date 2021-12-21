@@ -111,3 +111,95 @@ main .credit-data div .button button:hover{
     box-shadow: 0px 0px 15px rgb(23, 223, 0, .8);
     transition: margin-bottom 20ms, box-shadow 20ms;
 }
+
+
+@media (max-width: 361px){
+
+    main .payment-title{
+        padding-top: 110px;
+    }
+
+    main .info-form .text{
+        flex-direction: column;
+    }
+
+    main .info-form h3{
+        font-size: 0.7rem;
+    }
+
+    main .personal-info {
+        font-size: 0.7rem;
+    }
+
+    main .credit-card p{
+        font-size: 0.6rem;
+    }
+
+    main .credit-card .card-elements p{
+        font-size: 0.6rem;
+    }
+
+    main .credit-card .card-elements input{
+        width: 100%;
+    }
+
+    main .credit-card a{
+        font-size: 0.6rem;
+    }
+
+    main .personal-info input{
+        color: white;
+        width: 100%
+    }
+
+    main .credit-data div .button button{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        padding: 2% 10%;
+        margin: 1rem auto;
+    }
+
+
+    
+    main .product-info img{
+        margin-left: 0;
+    }
+
+}
+
+
+@media (min-width: 361px) and (max-width: 769px){
+
+    
+
+    
+}
+
+@media (min-width: 769px){
+
+    main .payment-title{
+        color: white;
+        padding-top: 200px;
+        padding-left: 5%;
+        width: 80%;
+    }
+
+    main .personal-info {
+        font-size: 1.2rem;
+    }
+
+    main .credit-card p{
+        font-size: 1.2rem;
+    }
+
+    main .credit-card .card-elements p{
+        font-size: 1.2rem;
+    }
+
+    main .personal-info input{
+        color: white;
+        width: 50%
+    }
+
+}
