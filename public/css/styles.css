@@ -452,6 +452,143 @@ footer .connect .social-media .container-contact-info{
     width: 90%;
 }
 
+*{
+    box-sizing: border-box;
+}
+
+.create{
+    background: black;
+    width: 100%;
+}
+
+.background-color{
+    background: black;
+}
+
+.cart-title{
+    margin-left: 100px;
+}
+
+
+.section-container{
+    border: dotted 20px aquamarine;
+    width: 70%;
+    height: 90%;
+    color: white;
+    margin: auto;
+}
+
+.product-сontainer{
+    display: flex;
+}
+
+
+.product-img{
+    width: 80%;
+    padding: 20px 80px;
+    display: flex;
+}
+
+body{
+    font-family: 'Roboto';
+    background-color: white;
+}
+
+.create{
+    border: dotted 20px aquamarine;
+    width: 60%;
+    height: 850px;
+}
+
+h3{
+    font-size: 24px;
+    color:#ebebeb
+}
+
+p{
+    font-size: 16px;
+}
+
+
+main{
+    font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+main .info-form{
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 80%;
+}
+
+
+main .info-form h3{
+    color: black;
+    background-color: white;
+    padding: 0.5rem;
+    
+}
+
+main .info-form .text{
+    color: black;
+    background-color: white;
+
+}
+
+
+
+main .product-info .text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+main .product-info img{
+    margin: 20px;
+}
+
+main .personal-info{
+    color: white;
+}
+
+main .personal-info .info div{
+    margin: 1rem;
+}
+
+.info{
+    border: dotted 20px aquamarine;
+    width: 900px;
+    
+}
+
+.form-style{
+    font-size: 40px;
+}
+
+.form-style.c{
+    font-size: 20%;
+}
+
+.boton-borrar-r{
+    background:red;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px
+}
+
 @media (max-width: 361px){
 
     header .top-header .nav-section1 .form{
@@ -674,3 +811,5 @@ footer .connect .social-media .container-contact-info{
     }
 
 }
+
+
