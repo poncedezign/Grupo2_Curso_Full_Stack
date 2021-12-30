@@ -2,13 +2,14 @@ const express = require('express');
 const app = express();
 const path = require('path')
 
-let rutasGenerales = require('./routes/main');
-app.use('/', rutasGenerales);
+let main = require('./routes/main.js');
 
-app.set('views', path.join(__dirname, 'views'));
-//app.set('view engine', 'ejs');
+//app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', main);
 
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
