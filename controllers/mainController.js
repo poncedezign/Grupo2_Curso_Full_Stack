@@ -1,21 +1,24 @@
 const mainController = {
-    home: (request, response) => {
-        response.sendFile("home", {titulo: 'Esta es la pestaña de index.'});
+    home: (req, res) => {
+        return res.render("home");
     },
-    login: (request, response) => {
-        response.render("login", {descripcion: 'Esta es una propiedad de descripción.'});
+    login: (req, res) => {
+        return res.render("login");
     },
-    register: (request, response) => {
-        console.log("Ruta principal");
+    register: (req, res) => {
+        return res.render("register");
 
     },
-    cardPayment: (request, response) => {
-        console.log("Pago con tarjeta");    
+    cardPayment: (req, res) => {
+        return res.render("cardPayment");    
     },
-    articulo: (request, response) => {
+    articulo: (req, res) => {
         let id = request.params.id;
         let descripcion = request.params.descripcion;
         response.render("articulo", {id, descripcion});
+    },
+    carrito: (req,res) =>{
+        return res.render('carrito')
     }
 };
 

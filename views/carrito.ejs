@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidxs a MercadoLiebre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <%- include('partials/header') %>
+        <main class="background-color">
+            <section class="section-container">
+                <h2 class="cart-title">Carro de la compra</h2>
+                <article class="product-сontainer">
+                <div>
+                    <img src="/images/img-cafetera-moulinex.jpg" alt="Sams" class="product-img">  
+                </div>
+                <div class="info">
+                    <p> nombre del producto seleccionado</p>
+                    <p> codigo del producto seleccionado</p>
+                    <p>precio</p>
+                    <p>envio gratis a todo el pais</p>
+                    <a href="" >Desgargar ficha tecnica</a>
+                    <div class="form-style.c">
+                        <label for="email">Cantidad</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="submit" value="Enviar" class="boton-enviar-r">
+                    </div>
+                    <div>
+                        <input type="reset" value="Borrar" class="boton-borrar-r">
+                    </div>
+                </div>
+                </article>
+                <div>
+                    <form action=""></form>
+                </div>
+            </section>
+        </main>
+        <%- include('partials/footer') %>
+    </body>
+</html>

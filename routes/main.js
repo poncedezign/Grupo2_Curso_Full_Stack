@@ -4,11 +4,10 @@ const mainController = require('../controllers/mainController');
 
 // Sistema de ruteo
 router.get('/', mainController.home);
-
 router.get('/login', mainController.login);
-
 router.get('/register', mainController.register);
 router.get('/cardPayment', mainController.cardPayment);
+router.get('/carrito', mainController.carrito);
 
 router.get('/articulo/:id/:descripcion?', mainController.articulo);
 
