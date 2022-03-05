@@ -3,6 +3,8 @@ const app = express();
 const path = require('path')
 
 let main = require('./routes/main.js');
+let product = require('./routes/productRoutes.js');
+let user = require('./routes/userRoutes.js');
 
 //app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -10,6 +12,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', main);
+app.use('/user', user);
+app.use('/product', product);
 
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
