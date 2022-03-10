@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', main);
 app.use('/user', user);
-app.use('/product', product);
+app.use('/products', product);
 
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
