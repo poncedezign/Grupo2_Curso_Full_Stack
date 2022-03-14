@@ -1,5 +1,8 @@
-const req = require("express/lib/request");
-const res = require("express/lib/response");
+
+const path = require ('path')
+const fs = require ('fs')
+const productFilePath =path.join (__dirname, '../data/productDataBase.json');
+const product = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
 const productController = {
 
@@ -28,7 +31,7 @@ putProducts: (req, res) => {
     res.render("home");
 },
 products: (req, res) => {
-    res.render("products");
+    res.render("products",{listaDeProducto: product });
 }
 }
 

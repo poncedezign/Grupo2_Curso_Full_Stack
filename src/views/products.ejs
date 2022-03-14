@@ -11,8 +11,12 @@
     <body>
         <%- include('partials/header') %>
         <main>
-            <h1>Products</h1>
-            <h3>Administrar Producto</h3>
+            <h1>Products</h1>  
+            <ul style="color: aliceblue;">
+            <% listaDeProducto.forEach (function (producto){%>
+            <li><%- producto.name %></li>
+            <% }) %>
+        </ul> 
             <form action="product-admi" method="POST" class="product-admi">
                 
                 <section class="personal-info">
