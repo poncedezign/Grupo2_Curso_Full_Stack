@@ -12,8 +12,10 @@
         <%- include('partials/header') %>
         <main>
             <h1>Edit</h1>
-            <h3>Administrar Producto</h3>
-            <form action="product-admi" method="POST" class="product-admi">
+            <h3>Editando Producto</h3>
+            <form action="/products/edit/<%= editProducts.id %>?_method=PUT"
+                method="POST"
+                class="product-admi">
                 
                 <section class="personal-info">
                     <div>
