@@ -6,14 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
         <%- include('partials/header') %>
         <main>
             <h1>Edit</h1>
-            <h3>Administrar Producto</h3>
-            <form action="product-admi" method="POST" class="product-admi">
+            <h3 style="color : white;">Administrar Producto</h3>
+            <%console.log(product.name) %>
+            <h3 style="color : white;"><%-product.name%></h3>
+            <form action="/products?_method=PUT" method="POST" class="product-admi" enctype="multipart/form-data">
                 
                 <section class="personal-info">
                     <div>
@@ -21,10 +23,11 @@
                     </div>
                     
                     <div class="product">
-
+                        <h3>Item ID: <%-product.id%></h3>
+                        <input class="id" type="text" name="id" id="name" value="<%-product.id%>" style="display : none;">
                             <div>
                                 <label for="nombre-del-producto">Nombre del producto:</label>
-                                <input type="text" name="name" id="name">    
+                                <input type="text" name="name" id="name" value="loquesea">    
                             </div>
                 
                             <div>
@@ -52,6 +55,11 @@
                             <div>
                                 <label for="price">Precio</label>
                                 <input type="number" name="price" id="price">  
+                            </div>
+
+                            <div>
+                                <label for="edit">Editar</label>
+                                <input type="submit" name="edit" id="edit">  
                             </div>
                     </div>  
                 </section>

@@ -475,7 +475,7 @@ footer .connect .social-media .container-contact-info{
     margin: auto;
 }
 
-.product-сontainer{
+.product-container{
     display: flex;
 }
 
@@ -488,7 +488,7 @@ footer .connect .social-media .container-contact-info{
 
 body{
     font-family: 'Roboto';
-    background-color: white;
+    background-color: black;
 }
 
 .create{
