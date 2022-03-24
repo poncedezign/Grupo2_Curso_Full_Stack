@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) { 
        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
   })
-//const productArray = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
+//cons    productDataBase = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 
 let productProto = {
      id: 16,
@@ -28,10 +28,10 @@ const productController = {
 product: (req, res) => {
     let id = req.params.id;
     const detailproduct = productDataBase.find (p => p.id == id)
-    res.render("product", {products: detailproduct});
+    res.render("product", {product: detailproduct});
 
     //let descripcion = req.params.descripcion;
-  /*   productArray.forEach((item, i) => {
+  /*     productDataBase.forEach((item, i) => {
         if (id == item.id) {
             console.log("Hola Perro")
             res.render("product", {product : item});
@@ -46,7 +46,7 @@ editProducts: (req, res) => {
     res.render ("editProducts", {product: item})
 
     /*     let id = req.params.id;
-    let prod = productArray.forEach((item) => {
+    let prod     productDataBase.forEach((item) => {
         if (item.id == id) {
             res.render("editProducts", {product : item});
         }
@@ -68,7 +68,7 @@ deleteProducts: (req, res) => {
 },
 
 postProducts: (req, res) => {
-    productProto.id = productArray[productArray.length-1].id + 1;
+    productProto.id = productDataBase[productDataBase.length-1].id + 1;
     productProto.name = req.body.name;
     productProto.description = req.body.description;
     productProto.category = req.body.category;
@@ -76,34 +76,33 @@ postProducts: (req, res) => {
     productProto.image = req.file.filename;
     productProto.price = parseInt(req.body.price);
 
-    productArray.push(productProto)
+    productDataBase.push(productProto)
 
-    fs.writeFileSync(productFilePath, JSON.stringify(productArray), 'utf-8')
+    fs.writeFileSync(productFilePath, JSON.stringify(productDataBase), 'utf-8')
     res.redirect("/");
 },
 putProducts: (req, res) => {
     let id = parseInt(req.body.id);
     console.log(req.body)
     console.log("Hola mundo" + id)
-    console.log(typeof(id) +"  "+ typeof(productArray[0].id))
     let index = 0;
-    productArray.forEach((item, i) => {
+    productDataBase.forEach((item, i) => {
         if (id == item.id) {
             console.log("Hola Perro")
             index = i;
         }
     })
     console.log(index)
-    productArray[index].name = req.body.name;
-    productArray[index].description = req.body.description;
-    productArray[index].category = req.body.category;
-    productArray[index].color = req.body.color;
-    productArray[index].price = parseInt(req.body.price);
-    fs.writeFileSync(productFilePath, JSON.stringify(productArray), 'utf-8')
+    productDataBase[index].name = req.body.name;
+    productDataBase[index].description = req.body.description;
+    productDataBase[index].category = req.body.category;
+    productDataBase[index].color = req.body.color;
+    productDataBase[index].price = parseInt(req.body.price);
+    fs.writeFileSync(productFilePath, JSON.stringify(productDataBase), 'utf-8')
     res.redirect("/");
 },
 products: (req, res) => {
-    res.render("products",{listaDeProducto: productArray });
+    res.render("products", {listaDeProducto: productDataBase });
 }
 }
 
