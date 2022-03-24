@@ -18,15 +18,6 @@
   "image": "img-macbook-pro-2019.jpg"
  },
  {
-  "id": 6,
-  "name": "Aire Acondicionado 3200w Frio / Calor",
-  "description": "AIRE SPLIT 3200W TACA-3200WCHSA/KC FC TCL. Capacidad frio 3200 Watts. Capacidad calor 3300 Watts. Potencia Electrica(W)frio 996. Potencia Electrica(W)calor 1028. Eficiencia energética calor C. Eficiencia energética frio A. Frigorias 2750 UNIDAD INTERIOR. Peso Bruto 10kg. Peso Neto 7 kg",
-  "price": 20999,
-  "discount": 12,
-  "image": "img-aire-acondicionado.jpg",
-  "category": "in-sale"
- },
- {
   "id": 8,
   "name": "Apple iPhone 11 Pro Dual SIM 256 GB",
   "description": "¡El nuevo smartphone que lo tiene todo! Con este lanzamiento, Apple ha superado todos sus récords. Su diseño se destaca por sus líneas finas y distinguidas a partir de una sola hoja de vidrio resistente, combinada con aluminio de excelente calidad.",
@@ -97,14 +88,5 @@
   "discount": 12,
   "image": "img-bicicleta-fierce.jpg",
   "category": "visited"
- },
- {
-  "id": 16,
-  "name": "Sony Srs-xb12 Parlante Bluetooth Portátil",
-  "price": 4699,
-  "discount": 5,
-  "category": "in-sale",
-  "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
-  "image": "img-parlante-sony.jpg"
  }
 ]
