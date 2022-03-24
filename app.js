@@ -9,7 +9,7 @@ let user = require('./src/routes/userRoutes.js');
 app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', main);
 app.use('/user', user);

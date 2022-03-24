@@ -1,28 +1,28 @@
-
+const multer = require ('multer')
 const path = require ('path')
 const fs = require ('fs');
 const { send } = require('express/lib/response');
 const productFilePath =path.join (__dirname, '../data/productDataBase.json');
-const product = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
-
-const multer = require ('multer')
-const storage = multer.diskStorage({
-    destination: function (req, file, cb){
-        cb(null, path.join(__dirname, '../../public/data/productDataBase.json'))
-    }
-})
+const productDataBase = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
+const storage = multer.diskStorage({ 
+    destination: function (req, file, cb) { 
+       cb(null, './public/images/avatars'); 
+    }, 
+    filename: function (req, file, cb) { 
+       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+  })
 const productController = {
 
 product: (req, res) => {
     let id = req.params.id;
-    const products = products.find (p =s> p.id == id)
-    res.render("products", {products});
+    const detailproduct = productDataBase.find (p => p.id == id)
+    res.render("products", {products: detailproduct});
 
 },
 editProducts: (req, res) => {
     let id = req.params.id
-    const product = products.find (p => p.id == id)
-    res.render ('product-edit-form', {product})
+    const product = productDataBase.find (p => p.id == id)
+    res.render ("products", {listaDeProducto: productDataBase})
 
 },
 update: (req, res) => {
@@ -39,13 +39,15 @@ createProducts: (req, res) => {
 },
 deleteProducts: (req, res) => {
     let id = req.params.id;
-    const idx = products.finIndex(p=> p.id == id)
-    products.splice(idx, 1)
+    const idx = productDataBase.findIndex(p => p.id == id)
+    productDataBase.splice(idx, 1)
+    fs.writeFileSync(productFilePath, JSON.stringify(productDataBase, null, ' '))
+    res.render("products", {listaDeProducto: productDataBase})
 
 },
 store: (req, res) => {
 const newProduct = {
-    id: this.products [this.products.length -1].id +1,
+    id: products [products.length -1].id +1,
     ...req.body,
     image: ""
 }

@@ -1,13 +1,18 @@
+const multer = require ('multer')
 const path = require ('path')
 const fs = require ('fs');
 const { send } = require('express/lib/response');
 const productFilePath =path.join (__dirname, '../data/productDataBase.json');
 const product = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
-const multer = require ('multer')
-const storage = multer.diskStorage({
-    destination: function (req, file, cb){
-        cb(null, path.join(__dirname, '../../public/data/productDataBase.json'))
+
+const storage = multer.diskStorage({ 
+    destination: function (req, file, cb) { 
+       cb(null, './public/images/avatars'); 
+    }, 
+    filename: function (req, file, cb) { 
+       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+  })
 
 const mainController = {
     home: (req, res) => {
@@ -27,6 +32,6 @@ const mainController = {
     producto: (req,res) =>{
     return res.render('producto')
 }
-};
+}
 
 module.exports = mainController;
