@@ -13,7 +13,7 @@
         <main>
             <h1>Create</h1>
             <h3>Administrar Producto</h3>
-            <form action="product-admi" method="POST" class="product-admi">
+            <form action="/products" method="POST" class="product-admi" enctype="multipart/form-data">
                 
                 <section class="personal-info">
                     <div>
@@ -21,15 +21,14 @@
                     </div>
                     
                     <div class="product">
-
                             <div>
                                 <label for="nombre-del-producto">Nombre del producto:</label>
                                 <input type="text" name="name" id="name">    
                             </div>
                 
-                            <div>
+                            <div style="display: flex; flex-direction: row;">
                                 <label for="description">Descripción</label>
-                                <input type="text" name="description" id="description">    
+                                <input type="text" name="description" id="description" style="height: 10rem;">    
                             </div>
 
                             <div>
@@ -52,6 +51,10 @@
                             <div>
                                 <label for="price">Precio</label>
                                 <input type="number" name="price" id="price">  
+                            </div>
+
+                            <div style="margin-bottom: 1rem;">
+                                <input type="submit" name="edit" id="edit" value="Editar">  
                             </div>
                     </div>  
                 </section>

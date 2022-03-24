@@ -11,50 +11,24 @@
     <body>
         <%- include('partials/header') %>
         <main>
-            <h3><%-products%>Administrar Producto</h3>
-            <form action="product-admi" method="POST" class="product-admi">
-                
-                <section class="personal-info">
-                    <div>
-                        <h3>1.Informacion del Producto</h3>
-                    </div>
-                    
-                    <div class="product">
+            <h3>Administrar Producto</h3>
 
-                            <div>
-                                <label for="nombre-del-producto">Nombre del producto:</label>
-                                <input type="text" name="name" id="name">    
-                            </div>
-                
-                            <div>
-                                <label for="description">Descripción</label>
-                                <input type="text" name="description" id="description">    
-                            </div>
-
-                            <div>
-                                <label for="category">Categoría</label>
-                                <select name="category" id="category">
-                                    <option value="guitarra">Guitarra</option>
-                                    <option value="bajos">Bajos</option>
-                                    <option value="baterias">Baterías</option>
-                                    <option value="teclados">Teclados</option>
-                                </select>    
-                            </div>
-                            <div>
-                                <label for="color">Color</label>
-                                <input type="color" name="color" id="color">  
-                            </div>
-                            <div>
-                                <label for="image">Imagen</label>
-                                <input type="file" name="image" id="image">  
-                            </div>
-                            <div>
-                                <label for="price">Precio</label>
-                                <input type="number" name="price" id="price">  
-                            </div>
-                    </div>  
-                </section>
-            </form>
+            <div class="product-detail" style="display: flex; flex-direction: row ;">
+                <div>
+                    <img src="/images/<%=product.image%>" alt="Imagen del producto" width="100%">
+                </div>
+                <div style="padding : 5%;">
+                    <h3>Detalles</h3>
+                   <ul style="color: aliceblue;">
+                       <li>Id del producto: <%-product.id%></li>
+                       <li>Nombre: <%-product.name%></li>
+                       <li>Descripcion: <%-product.description%></li>
+                       <li>Categoria: <%-product.category%></li>
+                       <li>Color: <%-product.color%></li>
+                       <li>Precio: <%-product.price%></li>
+                   </ul>     
+                </div>
+            </div>
         </main>
         <%- include('partials/footer') %>
     </body>

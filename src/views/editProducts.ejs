@@ -12,21 +12,42 @@
         <%- include('partials/header') %>
         <main>
             <h1>Edit</h1>
-            <h3>Editando Producto</h3>
-            <form action="/products/edit/<%= editProducts.id %>?_method=PUT"
-                method="POST"
-                class="product-admi">
+            <h3 style="color : black;">Administrar Producto</h3>
+            <%console.log(product.name) %>
+            <h3 style="color : white;"><%-product.name%></h3>
+
+            
+            <form action="/products?_method=PUT" method="POST" class="product-admi">
                 
                 <section class="personal-info">
+
+                    <div class="product-detail" style="display: flex; flex-direction: row ;">
+                        <div>
+                            <img src="/images/<%=product.image%>" alt="Imagen del producto" width="100%">
+                        </div>
+                        <div style="padding : 5%;">
+                            <h3>Detalles</h3>
+                           <ul>
+                               <li>Id del producto: <%-product.id%></li>
+                               <li>Nombre: <%-product.name%></li>
+                               <li>Descripcion: <%-product.description%></li>
+                               <li>Categoria: <%-product.category%></li>
+                               <li>Color: <%-product.color%></li>
+                               <li>Precio: <%-product.price%></li>
+                           </ul>     
+                        </div>
+                    </div>
+                    
                     <div>
-                        <h3>1.Informacion del Producto</h3>
+                        <h3>Introduzca la nueva informacion del producto</h3>
                     </div>
                     
                     <div class="product">
-
+                        <h3>Item ID: <%-product.id%></h3>
+                        <input class="id" type="text" name="id" id="name" value="<%-product.id%>" style="display : none;">
                             <div>
                                 <label for="nombre-del-producto">Nombre del producto:</label>
-                                <input type="text" name="name" id="name">    
+                                <input type="text" name="name" id="name" value="loquesea">    
                             </div>
                 
                             <div>
@@ -47,13 +68,17 @@
                                 <label for="color">Color</label>
                                 <input type="color" name="color" id="color">  
                             </div>
-                            <div>
+                            <!-- <div>
                                 <label for="image">Imagen</label>
                                 <input type="file" name="image" id="image">  
-                            </div>
+                            </div> -->
                             <div>
                                 <label for="price">Precio</label>
                                 <input type="number" name="price" id="price">  
+                            </div>
+
+                            <div style="margin-bottom: 1rem;">
+                                <input type="submit" name="edit" id="edit" value="Editar">  
                             </div>
                     </div>  
                 </section>
