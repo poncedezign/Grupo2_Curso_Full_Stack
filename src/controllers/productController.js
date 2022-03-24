@@ -1,7 +1,8 @@
 const path = require ('path')
 const fs = require ('fs')
 const productFilePath =path.join (__dirname, '../data/productDataBase.json');
-const product = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
+const productArray = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
+
 let productProto = {
      id: 16,
      name: "Sony Srs-xb12 Parlante Bluetooth Portátil",
@@ -17,22 +18,26 @@ const productController = {
 product: (req, res) => {
     let id = req.params.id;
     //let descripcion = req.params.descripcion;
-    res.render("product", {id});
-
+    productArray.forEach((item, i) => {
+        if (id == item.id) {
+            console.log("Hola Perro")
+            res.render("product", {product : item});
+        }
+    })
+    
 },
+
 editProducts: (req, res) => {
     let id = req.params.id;
-    let prod = product.forEach((item) => {
+    let prod = productArray.forEach((item) => {
         if (item.id == id) {
             res.render("editProducts", {product : item});
         }
     });
-
-    
 },
 createProducts: (req, res) => {
-    let loquesea = req.body;
-    res.render("products", {loquesea : loquesea});
+    
+    res.render("createProducts");
 },
 deleteProducts: (req, res) => {
     let id = req.params.id;
@@ -40,7 +45,7 @@ deleteProducts: (req, res) => {
 
 },
 postProducts: (req, res) => {
-    productProto.id = product[product.length].id + 1;
+    productProto.id = productArray[productArray.length-1].id + 1;
     productProto.name = req.body.name;
     productProto.description = req.body.description;
     productProto.category = req.body.category;
@@ -48,28 +53,34 @@ postProducts: (req, res) => {
     productProto.image = req.file.filename;
     productProto.price = parseInt(req.body.price);
 
-    product.push(productProto)
+    productArray.push(productProto)
 
-    fs.writeFileSync(productFilePath, JSON.stringify(product), 'utf-8')
-    console.log(productProto);
-    console.log(req.file);
+    fs.writeFileSync(productFilePath, JSON.stringify(productArray), 'utf-8')
     res.redirect("/");
 },
 putProducts: (req, res) => {
-    let id = req.body.id;
-    console.log("Hola mundo")
+    let id = parseInt(req.body.id);
     console.log(req.body)
-    /* let prod = product[id];
-    product[id].name = req.body.name;
-    product[id].description = req.body.description;
-    product[id].color = req.body.color;
-    product[id].image = req.file.filename;
-    product[id].price = parseInt(req.body.price);
-    fs.writeFileSync(productFilePath, JSON.stringify(product), 'utf-8')
-    res.redirect("/"); */
+    console.log("Hola mundo" + id)
+    console.log(typeof(id) +"  "+ typeof(productArray[0].id))
+    let index = 0;
+    productArray.forEach((item, i) => {
+        if (id == item.id) {
+            console.log("Hola Perro")
+            index = i;
+        }
+    })
+    console.log(index)
+    productArray[index].name = req.body.name;
+    productArray[index].description = req.body.description;
+    productArray[index].category = req.body.category;
+    productArray[index].color = req.body.color;
+    productArray[index].price = parseInt(req.body.price);
+    fs.writeFileSync(productFilePath, JSON.stringify(productArray), 'utf-8')
+    res.redirect("/");
 },
 products: (req, res) => {
-    res.render("products",{listaDeProducto: product });
+    res.render("products",{listaDeProducto: productArray });
 }
 }
 

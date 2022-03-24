@@ -12,20 +12,20 @@ const storage = multer.diskStorage({
        cb(null, path.join(__dirname, '../../public/images'));
     }, 
     filename: function (req, file, cb) { 
+        console.log(path.extname(file.originalname))
        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
 })
 
 const uploadFile = multer({storage});
 
 
-router.get('/:id', productController.product);
-router.get('/', productController.products)
-
+router.get('/', productController.products);
 router.get ('/create', productController.createProducts);
 router.get('/:id/edit', productController.editProducts);
+router.get('/:id', productController.product);
+router.post ('/', uploadFile.single('image'),  productController.postProducts);
+router.put('/', productController.putProducts);
+router.get ('/delete', productController.deleteProducts);
 
-router.get ('/delete', productController.deleteProducts)
-router.post ('/', uploadFile.single('image'),  productController.postProducts)
-router.put('/', productController.putProducts)
 
 module.exports = router;

@@ -11,13 +11,14 @@
     <body>
         <%- include('partials/header') %>
         <main>
-            <h1>Products</h1>  
-            <ul style="color: aliceblue;">
-            <% listaDeProducto.forEach (function (producto){%>
-            <li><%- producto.name %></li>
-            <% }) %>
-        </ul> 
-            <form action="product-admi" method="POST" class="product-admi">
+            <h1 style="padding-top: 2rem;">Lista de Productos</h1>  
+            <h3 style="color: aliceblue; padding-bottom: 1rem;">Lista de productos</h3>
+            <ul style="color: aliceblue; padding-bottom: 1rem;">
+                <% listaDeProducto.forEach (function (producto){%>
+                <li><a href="/products/<%=producto.id%>"><%- producto.name %></a></li>
+                <% }) %>
+            </ul> 
+           <!--  <form action="product-admi" method="POST" class="product-admi">
                 
                 <section class="personal-info">
                     <div>
@@ -59,7 +60,7 @@
                             </div>
                     </div>  
                 </section>
-            </form>
+            </form> -->
         </main>
         <%- include('partials/footer') %>
     </body>
