@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "name": "Karina",
+        "lastName": "Ponce",
+        "email": "karinaponce.pyt@gmail.com",
+        "password": "1234",
+        "category": "Premium",
+        "image" : "avatar"
+    }
+]
