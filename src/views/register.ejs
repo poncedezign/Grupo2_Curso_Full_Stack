@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidos a BMOL</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <%- include('partials/header') %>
+        <main>
+            <h3>Ingresa tu pago</h3>
+            <form action="/users/register" method="POST" class="info-form" enctype="multipart/form-data">
+                <section class="selected-product">
+                    <div class="product-info">
+                        <div class="text">
+                            <h3>Producto seleccionado #3465</h3> 
+                            <h3>Costo: $18,000</h3>
+                        </div>
+
+                        <div>
+                            <img src="https://www.mrcdinstrumentos.com.mx/shared/productos/14769/8213167.jpg" alt="Guitarrra Electrica" width="30%">
+                        </div>
+                    </div>
+                </section>
+                <section class="personal-info">
+                    <div>
+                        <h3>1. Datos del titular</h3>
+                    </div>
+                    
+                    <div class="info">
+
+                            <div>
+                                <label for="name">Nombre:</label>
+                                <input type="text" name="name" id="name">    
+                            </div>
+                
+                            <div>
+                                <label for="lastName">Apellidos</label>
+                                <input type="text" name="address" id="address">    
+                            </div>
+
+                            <div>
+                                <label for="pasword">Contraseña</label>
+                                <input type="text" name="phone-number" id="phone-number">    
+                            </div>
+                
+                            <div>
+                                <label for="mail">Correo Electronico</label>
+                                <input type="email" name="mail" id="mail">    
+                            </div>
+
+                            <div class= "field" >
+                                <label for="user-image">Imagen del Usuario</label>
+                                <input type="file" name="user-image" id="user-image">    
+                            </div>
+
+<!--                     </div>  
+ -->                </section>
+
+                <section class="credit-data">
+                    <div>
+                        <h3>2. Datos de la tarjeta de crédito</h3>
+                    </div>
+                    
+                    <div class="credit-card">
+                        <div>    
+                            <p><input type="checkbox" name="remember-card" value="yes"> Quiero almacenar esta tarjeta para agilizar los proximos pagos</p>
+                        </div>
+
+                        <div>
+                            <p>Tipo de tarjeta 
+                                <select name="card-type" id="card-type">
+                                    <option value="debit">Debito</option>
+                                    <option value="credit">Credito</option>
+                                </select>
+                            </p>
+                            
+                        </div>
+
+                        <div class="card-elements">
+                            <p>Numero de tarjeta</p>
+                            <input type="text" name="card-number">
+                        </div>
+
+                        <div class="card-elements">
+                            <p>Fecha de caducidad</p>
+                            <input type="month" name="date">
+                        </div>
+
+                        <div class="card-elements">
+                            <p>Código de seguridad</p>
+                            <input type="password" name="password" id="password">
+                            <a href="*">¿que es un codigo de seguridad</a>
+                        </div>
+
+                        <div class="button">
+                            <button type="submit">CONTINUAR</button>
+                        </div>
+                    </div>  
+                </section>
+            </form>
+        </main>
+        <%- include('partials/footer') %>
+    </body>
+</html>

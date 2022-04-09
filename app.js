@@ -7,6 +7,7 @@ var bodyParser = require('body-parser')
 let main = require('./src/routes/main.js');
 let product = require('./src/routes/productRoutes.js');
 let user = require('./src/routes/userRoutes.js');
+const { register } = require('./src/controllers/userController.js');
 
 app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
@@ -22,8 +23,9 @@ app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public'));
 
 app.use('/', main);
-app.use('/user', user);
+app.use('/users', user);
 app.use('/products', product);
+
 
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
