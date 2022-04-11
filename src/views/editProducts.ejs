@@ -11,52 +11,27 @@
     <body>
         <%- include('partials/header') %>
         <main>
-            <h1>Edit</h1>
-            <h3 style="color : black;">Administrar Producto</h3>
-            <%console.log(product.name) %>
-            <h3 style="color : white;"><%-product.name%></h3>
-
-            
-            <form action="/products?_method=PUT" method="POST" class="product-admi" enctype="multipart/form-data">
+            <h>Administrar Producto</h3>
+            <form action="/products" method="POST" class="product-admi" enctype="multipart/form-data">
                 
                 <section class="personal-info">
-
-                    <div class="product-detail" style="display: flex; flex-direction: row ;">
-                        <div>
-                            <img src="/images/<%=product.image%>" alt="Imagen del producto" width="100%">
-                        </div>
-                        <div style="padding : 5%;">
-                            <h3>Detalles</h3>
-                           <ul>
-                               <li>Id del producto: <%-product.id%></li>
-                               <li>Nombre: <%-product.name%></li>
-                               <li>Descripcion: <%-product.description%></li>
-                               <li>Categoria: <%-product.category%></li>
-                               <li>Color: <%-product.color%></li>
-                               <li>Precio: <%-product.price%></li>
-                           </ul>     
-                        </div>
-                    </div>
-                    
                     <div>
-                        <h3>Introduzca la nueva informacion del producto</h3>
+                        <h3>Informacion del Producto</h3>
                     </div>
                     
                     <div class="product">
-                        <h3>Item ID: <%-product.id%></h3>
-                        <input class="id" type="text" name="id" id="name" value="<%-product.id%>" style="display : none;">
                             <div>
-                                <label for="nombre-del-producto">Nombre del producto:</label>
-                                <input type="text" name="name" id="name" value="loquesea">    
+                                <label for="nombre-del-producto"><h1>Nombre del producto:</h1></label>
+                                <input type="text" name="name" id="name">    
                             </div>
                 
-                            <div>
-                                <label for="description">Descripción</label>
-                                <input type="text" name="description" id="description">    
+                            <div style="display: flex; flex-direction: row;">
+                                <label for="description"><h1>Descripción</h1></label>
+                                <input type="text" name="description" id="description" style="height: 10rem;">    
                             </div>
 
                             <div>
-                                <label for="category">Categoría</label>
+                                <label for="category"><h1>Categoría</h1></label>
                                 <select name="category" id="category">
                                     <option value="guitarra">Guitarra</option>
                                     <option value="bajos">Bajos</option>
@@ -68,10 +43,10 @@
                                 <label for="color">Color</label>
                                 <input type="color" name="color" id="color">  
                             </div>
-                            <!-- <div>
+                            <div>
                                 <label for="image">Imagen</label>
                                 <input type="file" name="image" id="image">  
-                            </div> -->
+                            </div>
                             <div>
                                 <label for="price">Precio</label>
                                 <input type="number" name="price" id="price">  

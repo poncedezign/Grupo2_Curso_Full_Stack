@@ -11,28 +11,27 @@
     <body>
         <%- include('partials/header') %>
         <main>
-            <h1>Create</h1>
-            <h3>Administrar Producto</h3>
+            <h>Administrar Producto</h3>
             <form action="/products" method="POST" class="product-admi" enctype="multipart/form-data">
                 
                 <section class="personal-info">
                     <div>
-                        <h3>1.Informacion del Producto</h3>
+                        <h3>Informacion del Producto</h3>
                     </div>
                     
                     <div class="product">
                             <div>
-                                <label for="nombre-del-producto">Nombre del producto:</label>
+                                <label for="nombre-del-producto"><h1>Nombre del producto:</h1></label>
                                 <input type="text" name="name" id="name">    
                             </div>
                 
                             <div style="display: flex; flex-direction: row;">
-                                <label for="description">Descripción</label>
+                                <label for="description"><h1>Descripción</h1></label>
                                 <input type="text" name="description" id="description" style="height: 10rem;">    
                             </div>
 
                             <div>
-                                <label for="category">Categoría</label>
+                                <label for="category"><h1>Categoría</h1></label>
                                 <select name="category" id="category">
                                     <option value="guitarra">Guitarra</option>
                                     <option value="bajos">Bajos</option>
@@ -54,7 +53,7 @@
                             </div>
 
                             <div style="margin-bottom: 1rem;">
-                                <input type="submit" name="edit" id="edit" value="Editar">  
+                                <input type="submit" name="edit" id="edit" value="Editar"><a href="/users/createUser"></a>
                             </div>
                     </div>  
                 </section>

@@ -25,6 +25,9 @@ app.use(express.static(__dirname + '/public'));
 app.use('/', main);
 app.use('/users', user);
 app.use('/products', product);
+app.use((req, res, next) => {
+    res.status(404).render('./error')
+})
 
 
 app.listen(3000, ()=>{

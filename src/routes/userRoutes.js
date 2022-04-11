@@ -5,6 +5,7 @@ var router = express.Router();
 const { body, validationResult } = require('express-validator');
 const validaciones = require('../middlewares/validaciones');
 const userController = require('../controllers/userController');
+const res = require('express/lib/response');
 
 
 
@@ -20,6 +21,7 @@ const uploadFile = multer({storage:storage});
 
 router.put('/', userController.putUsers);
 router.get('/edit/:id',userController.editUsers);
+router.put('/confirmacionUsuario',userController.putUsers);
 router.get ('/delete/:id', userController.deleteUsers);
 
 router.get('/createUser', userController.showCreateUser);
