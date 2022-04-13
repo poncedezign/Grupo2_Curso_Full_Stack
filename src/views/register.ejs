@@ -11,98 +11,55 @@
     <body>
         <%- include('partials/header') %>
         <main>
-            <h3>Ingresa tu pago</h3>
-            <form action="/users/register" method="POST" class="info-form" enctype="multipart/form-data">
-                <section class="selected-product">
-                    <div class="product-info">
-                        <div class="text">
-                            <h3>Producto seleccionado #3465</h3> 
-                            <h3>Costo: $18,000</h3>
-                        </div>
-
-                        <div>
-                            <img src="https://www.mrcdinstrumentos.com.mx/shared/productos/14769/8213167.jpg" alt="Guitarrra Electrica" width="30%">
-                        </div>
-                    </div>
-                </section>
+            <section class="slider">
+            
+            <form action="/products" method="POST" class="product-admi" enctype="multipart/form-data">
                 <section class="personal-info">
+                    <% if (typeof alert != 'undefined') { %>
+                        <% alert.forEach(function(error) { %>
+                            <p><%= error.msg %></p>
+                        <% }) %>
+                    <% } %>
+ 
                     <div>
-                        <h3>1. Datos del titular</h3>
+                        <h3>Datos del titular</h3>
                     </div>
-                    
+
                     <div class="info">
 
-                            <div>
-                                <label for="name">Nombre:</label>
-                                <input type="text" name="name" id="name">    
-                            </div>
-                
-                            <div>
-                                <label for="lastName">Apellidos</label>
-                                <input type="text" name="address" id="address">    
-                            </div>
-
-                            <div>
-                                <label for="pasword">Contraseña</label>
-                                <input type="text" name="phone-number" id="phone-number">    
-                            </div>
-                
-                            <div>
-                                <label for="mail">Correo Electronico</label>
-                                <input type="email" name="mail" id="mail">    
-                            </div>
-
-                            <div class= "field" >
-                                <label for="user-image">Imagen del Usuario</label>
-                                <input type="file" name="user-image" id="user-image">    
-                            </div>
-
-<!--                     </div>  
- -->                </section>
-
-                <section class="credit-data">
-                    <div>
-                        <h3>2. Datos de la tarjeta de crédito</h3>
-                    </div>
-                    
-                    <div class="credit-card">
-                        <div>    
-                            <p><input type="checkbox" name="remember-card" value="yes"> Quiero almacenar esta tarjeta para agilizar los proximos pagos</p>
-                        </div>
-
                         <div>
-                            <p>Tipo de tarjeta 
-                                <select name="card-type" id="card-type">
-                                    <option value="debit">Debito</option>
-                                    <option value="credit">Credito</option>
-                                </select>
-                            </p>
-                            
-                        </div>
+                            <label for="userEmail"><h1>Correo Electrónico</h1></label>
 
-                        <div class="card-elements">
-                            <p>Numero de tarjeta</p>
-                            <input type="text" name="card-number">
+                            <input
+                                type="text"
+                                name="userEmail"
+                                id="userEmail"
+                                class="form-comtrol"
+                            >
                         </div>
+                        
+                        <div>
+                        <label for="userEmail"><h1>Contraseña</h1></label>
 
-                        <div class="card-elements">
-                            <p>Fecha de caducidad</p>
-                            <input type="month" name="date">
+                        <input
+                            type="text"
+                            name="userEmail"
+                            id="userEmail"
+                            class="form-comtrol"
+                            >
                         </div>
-
-                        <div class="card-elements">
-                            <p>Código de seguridad</p>
-                            <input type="password" name="password" id="password">
-                            <a href="*">¿que es un codigo de seguridad</a>
+                        
+                        <div>
+                            <div>
+                                <button type="submit"><a href="/users/createUser">Crear sesión</a></button>
+                                <button type="submit"><a href="/register">Usuario Creado</a></button>
+                                
+                            </div>
                         </div>
-
-                        <div class="button">
-                            <button type="submit">CONTINUAR</button>
-                        </div>
-                    </div>  
-                </section>
-            </form>
-        </main>
-        <%- include('partials/footer') %>
-    </body>
-</html>
+                    </section>
+                </form>
+            </main>
+            
+            <%- include('partials/footer'); %>
+        </body>
+    </html>

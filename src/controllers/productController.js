@@ -3,7 +3,7 @@ const path = require ('path')
 const fs = require ('fs');
 const { send } = require('express/lib/response');
 const productFilePath =path.join (__dirname, '../data/productDataBase.json');
-const productDataBase = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
+const productDataBase =JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
        cb(null, './public/images/avatars'); 

@@ -12,7 +12,7 @@
         <%- include('partials/header') %>
         <main>
             <h3>Ingresa tu pago</h3>
-            <form action="register-pay" method="POST" class="info-form" enctype="multipart/form-data">
+            <form action="/user/<% %-user.id %>?_method= DELETE" method="POST" class="user-admi">
                 <section class="selected-product">
                     <div class="product-info">
                         <div class="text">

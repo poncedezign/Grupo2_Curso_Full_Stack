@@ -10,8 +10,10 @@
     </head>
     <body>
         <%- include('partials/header') %>
-        <main>            
-            <form action="/products" method="POST" class="product-admi" enctype="multipart/form-data">
+        <main>
+            <section class="slider">
+            
+            <form action="/users" method="POST" class="user-admi" enctype="multipart/form-data">
                 <section class="personal-info">
                     <% if (typeof alert != 'undefined') { %>
                         <% alert.forEach(function(error) { %>
@@ -22,6 +24,9 @@
                     <div>
                         <h3>Datos del titular</h3>
                     </div>
+
+                    <div class="info">
+
                         <div>
                             <label for="userEmail"><h1>Correo Electrónico</h1></label>
 
@@ -42,18 +47,19 @@
                             id="userEmail"
                             class="form-comtrol"
                             >
-                        </div>   
-      
-                        <div>
-                            <button type="submit"><a href="/users/createUser">Crea una cuenta</a></button>
-                            <button type="submit"><a href="/">Seguir Navegando</a></button>
                         </div>
-                    </div>
-                </section>
-            </form>
-        </main>
-        
-        <%- include('partials/footer'); %>
-    </body>
-</html>
-
+                        
+                        <div>
+                            <div>
+                                <button type="submit"><a href="/users/createUser">Crear sesión</a></button>
+                                <button type="submit"><a href="/">Seguir navegando</a></button>
+                                
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </main>
+            
+            <%- include('partials/footer'); %>
+        </body>
+    </html>
